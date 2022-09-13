@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/guess"
+        android:layout_width="224dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        android:hint="Enter 4 word Guess"
+        android:inputType="text"
+        android:maxLength="4"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/wordview"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="52dp"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/enterbutton"
+        android:layout_width="109dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="12dp"
+        android:text="Enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toEndOf="@+id/guess" />
+
+    <TextView
+        android:id="@+id/guessonetext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="Guess 1 - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guesstwotext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="Guess 2 - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessonechecktext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessthreetext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="Guess 3 - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesstwochecktext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessonechecktext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="check - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessonetext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guesstwochecktext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="check - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesstwotext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessthreechecktext"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text="check - "
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessthreetext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessoneanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessonecheckanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessoneanswer"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guesstwoanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessonecheckanswer"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guesstwocheckanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesstwoanswer"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessthreeanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guesstwocheckanswer"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/guessthreecheckanswer"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessthreeanswer"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
