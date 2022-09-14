@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         var wordToGuess = getRandomFourLetterWord()
 
 
-        Toast.makeText(this, wordToGuess, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, wordToGuess, Toast.LENGTH_LONG).show()
 
         /**
          * Parameters / Fields:
@@ -59,43 +59,39 @@ class MainActivity : AppCompatActivity() {
         //while (checkGuess(text.toString().uppercase()) != "OOOO"){
 
             var yes = guessonecheck.text; guesstwocheck.text; guessthreecheck.text
-            var times = 0
+            var times = -1
 
             button.setOnClickListener {
-                times = 1
-                guessone.text = text
-                guessonecheck.text = checkGuess(text.toString().uppercase())
+                times += 1
+                if (times == 0) {
+                        guessone.text = text
+                        guessonecheck.text = checkGuess(text.toString().uppercase())
+                }
 
                 if (times == 1) {
-                    button.setOnClickListener {
-                        times += 1
-                        guesstwo.text = text
-                        guesstwocheck.text = checkGuess(text.toString().uppercase())
-                    }
+                    guesstwo.text = text
+                    guesstwocheck.text = checkGuess(text.toString().uppercase())
+
                 }
 
-                else if (times == 2) {
-                    button.setOnClickListener {
+                if (times == 2) {
+                    //button.setOnClickListener {
                         guessthree.text = text
                         guessthreecheck.text = checkGuess(text.toString().uppercase())
-                        times += 1
-                    }
+                        //times += 1
+                    //}
                 }
 
-                else if (checkGuess(text.toString().uppercase()) == "OOOO") {
+                if (checkGuess(text.toString().uppercase()) == "OOOO") {
                     Toast.makeText(this, "Good Job!", Toast.LENGTH_SHORT).show()
                     answer.text = "Answer- " + wordToGuess
                     times = 0
                 }
 
-                else if (times == 3){
+                if (times == 3){
                     answer.text = "Answer- " + wordToGuess
-                    Toast.makeText(this, "No more guesses", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Out of Guesses", Toast.LENGTH_LONG).show()
                     button.visibility = View.INVISIBLE
-
-                }
-                else{
-                    times += 1
                 }
             }
 
