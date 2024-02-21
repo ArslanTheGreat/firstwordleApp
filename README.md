@@ -48,7 +48,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-I was stuck on one part where it would just not input the user input into the third guess but I worked around it even though it took me till after the due date so I apologize.
+I was stuck on one part where it would just not input the user input into the third guess but I worked to correct it.
 
 ## License
 
